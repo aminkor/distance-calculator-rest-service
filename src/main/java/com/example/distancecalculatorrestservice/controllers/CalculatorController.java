@@ -2,6 +2,7 @@ package com.example.distancecalculatorrestservice.controllers;
 
 import com.example.distancecalculatorrestservice.dtos.DistanceCalculatorRequest;
 import com.example.distancecalculatorrestservice.services.DistanceCalculatorService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -15,7 +16,7 @@ public class CalculatorController {
     DistanceCalculatorService distanceCalculatorService;
 
     @PostMapping("/distance")
-    public String distanceCalculator(@RequestBody DistanceCalculatorRequest distanceCalculatorRequest) {
+    public String distanceCalculator(@Valid @RequestBody DistanceCalculatorRequest distanceCalculatorRequest) {
         return distanceCalculatorService.distanceCalculator(distanceCalculatorRequest);
     }
 }
