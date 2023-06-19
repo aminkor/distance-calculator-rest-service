@@ -1,50 +1,31 @@
 package com.example.distancecalculatorrestservice.dtos;
 
 public class DistanceCalculatorRequest {
-    private double firstInput;
-    private double secondInput;
-    private String firstUnit;
-    private String secondUnit;
+    private double[] inputs;
+    private String[] units;
     private String outputUnit;
 
-    public DistanceCalculatorRequest(double firstInput, double secondInput, String firstUnit, String secondUnit, String outputUnit) {
-        this.firstInput = firstInput;
-        this.secondInput = secondInput;
-        this.firstUnit = firstUnit;
-        this.secondUnit = secondUnit;
+
+    public DistanceCalculatorRequest(double[] inputs, String[] units, String outputUnit) {
+        this.inputs = inputs;
+        this.units = units;
         this.outputUnit = outputUnit;
     }
 
-    public double getFirstInput() {
-        return firstInput;
+    public double[] getInputs() {
+        return inputs;
     }
 
-    public void setFirstInput(double firstInput) {
-        this.firstInput = firstInput;
+    public void setInputs(double[] inputs) {
+        this.inputs = inputs;
     }
 
-    public double getSecondInput() {
-        return secondInput;
+    public String[] getUnits() {
+        return units;
     }
 
-    public void setSecondInput(double secondInput) {
-        this.secondInput = secondInput;
-    }
-
-    public String getFirstUnit() {
-        return firstUnit;
-    }
-
-    public void setFirstUnit(String firstUnit) {
-        this.firstUnit = firstUnit;
-    }
-
-    public String getSecondUnit() {
-        return secondUnit;
-    }
-
-    public void setSecondUnit(String secondUnit) {
-        this.secondUnit = secondUnit;
+    public void setUnits(String[] units) {
+        this.units = units;
     }
 
     public String getOutputUnit() {
